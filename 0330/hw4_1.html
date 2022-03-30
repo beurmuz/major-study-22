@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+    학번: 201810803
+    이름: 장서령
+    과제명: hw4_1.html
+ -->
+<html>
+    <head>
+        <title>hw4_1</title>
+        <style>
+            div, #target { background-color: yellow; }
+            #table_title {
+                font-size: 13;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- hw2_1.html -->
+        <h1>장서령</h1>
+        <div>
+            <p>안녕하세요. <i>휴먼지능정보공학과</i> 18학번 <strong>장서령</strong>입니다.</p>
+        </div>
+        <ul>
+            <li><span id="target">프로그래밍 디자인</span></li>
+            <li>휴먼지능정보종합설계1</li>
+            <li>빅데이터 시각화와 시뮬레이션</li>
+            <li>에너지와 녹색산업</li>
+            <li>성공학 특강</li>
+            <li>정보윤리와 보안</li>
+            <li>4차산업혁명과 메타기술</li>
+        </ul>
+        <p>
+            자주 방문하는 사이트는 <a href="https://www.naver.com/" target="_blank">네이버</a> 입니다. 
+        </p>
+
+        <!-- hw3_1.html -->
+        <table border="1">
+            <tr id="table_title">
+                <td>시간/요일</td>
+                <td>수</td>
+                <td>목</td>
+            </tr>
+            <tr>
+                <td>9~10시</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10~11시</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>11~12시</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12~13시</td>
+                <td rowspan="3">프로그래밍디자인</td>
+                <td rowspan="3">4차산업혁명과 메타기술</td>
+            </tr>
+            <tr>
+                <td>13~14시</td>
+            </tr>
+            <tr>
+                <td>14~15시</td>
+            </tr>
+            <tr>
+                <td>15~16시</td>
+                <td rowspan="3">빅데이터시각화와 시뮬레이션</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16~17시</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17~18시</td>
+                <td></td>
+            </tr>
+        </table>
+        
+        <br>
+    
+        <form>
+            아이디:
+            <input type="text" name="id" size=10> <br/>
+            비밀번호:
+            <input type="password" name="password" size=10> <br />
+            <input type="submit" value="로그인">
+            <input type="reset" value="취소">
+        </form>
+    </body>
+</html>
