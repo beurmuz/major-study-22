@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+    학번: 201810803
+    이름: 장서령
+    과제명: hw8_3.html
+-->
+<html>
+    <head>
+    </head>
+    <script>
+        var sum = 0;
+        var avg = 0;
+        var count = 0;
+
+        var num = prompt("양의 정수를 입력하세요.");
+        num = parseInt(num);   
+
+        while(num > 0) {
+            count++;
+            sum += num;
+
+            num = prompt("양의 정수를 입력하세요.");
+            num = parseInt(num);
+        }
+        avg = sum/count;
+        document.write('합: ' + sum);
+        document.write('평균: ' + avg);
+        
+    </script>
+    <body>
+    </body>
+</html>

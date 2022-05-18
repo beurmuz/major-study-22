@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    구입날짜:
+    <input type="date" id="pdate">
+    <button onclick="checkDate()">검사</button>
+    <script>
+        // document.write('<h3>구구단 게임</h3>');
+        // for(let i = 2; i < 10; i++) {
+        //     for(let j = 1; j < 10; j++) {
+        //         document.write('<span>'+ i + ' * ' + j + ' = ' + i*j + '</span> <br/>');
+        //     }
+        // }
+        // var d1 = new Date();
+        // document.write(`${d1.getFullYear()}년 ${d1.getMonth()+1}월 ${d1.getDate()}일`);
+        function checkDate() {
+            var s = document.getElementById("pdate").value;
+            var pdate = new Date(s);
+            var today = new Date();
+            var diff = today.getTime() - pdate.getTime();
+            var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            if (days > 30) {
+                alert("교환 기한이 지났습니다.");
+            }
+        }
+
+
+    </script>
+</body>
+</html>
