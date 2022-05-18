@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+    학번: 201810803
+    이름: 장서령
+    과제명: hw8_2.html
+-->
+<html>
+    <head>
+
+    </head>
+    <script>
+        var front_number = prompt('주민등록번호 앞자리 입력');
+        front_number = parseInt(front_number);
+        var back_number = prompt('주민등록번호 뒷자리 입력');
+        back_number = parseInt(back_number);
+        
+        var check_year = parseInt(back_number/1000000);
+        
+
+        var date = (front_number%100);
+        var month = ((front_number%10000)-date);
+        var year = (parseInt(front_number/10000));
+
+        month = month /100;
+        if(date < 10) {
+            date = '0' + date;
+        }
+        if(month < 10) {
+            month = '0' + month;
+        }
+
+        if(check_year === 1 || check_year === 2) {
+            document.write('19'+ year + "<br>");
+        } else if (check_year === 3 || check_year === 4) {
+            document.write('20'+ year + "<br>");
+        }
+        document.write(month + "<br>");
+        document.write(date);
+        </script>
+    <body>
+
+    </body>
+</html>
