@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+    학번: 201810803
+    이름: 장서령
+    과제명: hw9_3.html
+-->
+<html>
+    <head>
+    </head>
+
+    <body>
+    </body>
+
+    <script>
+        var sentence = 'An apple a day!';
+        var newSentence = sentence.toLowerCase(); // 소문자로 변경
+        var sentenceArray = newSentence.split(''); // 배열 생성
+        var countA = 0;
+        for(let x of sentenceArray) { // a 개수 세기
+            if(x === 'a') countA += 1;
+        }
+
+        var replaceSentence = newSentence.replace(/a/gi, '*'); // a를 *로 치환하기
+        
+        document.write('문장 = ' + sentence);
+        document.write('<br>길이 = ' + sentence.length);
+        document.write('<br>a 또는 A의 개수 = ' + countA);
+        document.write('<br>' + replaceSentence);
+        
+    </script>
+</html>

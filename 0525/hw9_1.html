@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+    학번: 201810803
+    이름: 장서령
+    과제명: hw9_1.html
+-->
+<html>
+    <head>
+    </head>
+    <body>
+    </body>
+    <script>
+        var today = new Date();
+        var today_year = today.getFullYear();
+        var today_month = Number(today.getMonth())+1;
+        var today_date = today.getDate();
+        document.write('오늘은 ' + today_year +'년 ' + today_month +'월 ' + today_date + '일입니다.');
+
+        var date1 = new Date(2022, 1, 1);
+        var date2 = new Date(2022, 5, 25);
+        var pass_seconds = date2.getTime() - date1.getTime();
+        var pass_date = (pass_seconds/1000/60/60/24);
+        document.write('<br><br>' + '올해 벌써 ' + pass_date + '일이 지났습니다.');
+    </script>
+</html>

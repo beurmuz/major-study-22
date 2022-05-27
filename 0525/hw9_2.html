@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+    학번: 201810803
+    이름: 장서령
+    과제명: hw9_2.html
+-->
+<html>
+    <head>
+    </head>
+    <body>
+    </body>
+    <script>
+        var front_number = prompt('주민등록번호 앞자리 입력');
+        var back_number = prompt('주민등록번호 뒷자리 입력');
+
+        var birth_year = front_number.substr(0,2);
+        var year_check = parseInt(back_number.substr(0,1));
+        var full_year;
+        var birth_month = parseInt(front_number.substr(2,2));
+        var birth_date = parseInt(front_number.substr(4,2));
+
+        if(year_check === 1 || year_check === 2) {
+            full_year = '19';
+        } else if(year_check === 3 || year_check === 4) {
+            full_year = '20';
+        }
+
+        document.write(full_year.concat(birth_year) + '<br>' + birth_month + '<br>' + birth_date);
+    </script>
+</html>
