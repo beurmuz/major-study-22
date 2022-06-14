@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex1</title>
+</head>
+<body>
+    <div id='remaining'></div>
+</body>
+<script>
+    function datesUntilNewYear() {
+        let remainTime = '';
+        let now = new Date();
+        let newYear = new Date('January 1, ' + (now.getFullYear() + 1));
+        let diff = newYear - now;
+
+        let milliseconds = Math.floor(diff%1000);
+        diff = diff/1000;
+
+        let seconds = Math.floor(diff%60);
+        diff = diff/60;
+
+        let minutes = Math.floor(diff%60);
+        diff = diff/60;
+
+        let hours = Math.floor(diff%24);
+        diff = diff/24;
+
+        let day = Math.floor(diff);
+
+        remainTime = `2023년 1월 1일까지 ${day}일, ${hours}시간, ${minutes}분, ${seconds}초 남았습니다!`;
+        document.getElementById('remaining').innerHTML = remainTime;
+        setTimeout('datesUntilNewYear()', 1000);
+    }
+
+    // 타이머를 시작한다. 
+    datesUntilNewYear();
+</script>
+</html>
